@@ -10,6 +10,17 @@ import HeroBanner from '~/components/homepage/HeroBanner.vue'
 export default {
   name: 'IndexPage',
   components: { HeroBanner },
+
+  head: {
+    title: 'Leo Asher',
+    meta: [
+      {
+        hid: 'Leo',
+        name: 'Leo Asher',
+        content: "This is Leo Asher's website",
+      },
+    ],
+  },
 }
 </script>
 
