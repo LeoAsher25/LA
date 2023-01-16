@@ -30,6 +30,11 @@ export default {
     }
   },
 
+  mounted() {
+    console.log('this: ', this.$nuxt.$colorMode.preference)
+    this.isDark = this.$nuxt.$colorMode.preference
+  },
+
   methods: {
     handleToggleTheme() {
       this.isDark = !this.isDark
