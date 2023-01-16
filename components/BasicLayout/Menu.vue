@@ -1,7 +1,7 @@
 <template>
   <div class="menu-wrap">
     <div class="normal-menu">
-      <div class="container flex justify-between items-center">
+      <div class="tw-container tw-flex tw-justify-between tw-items-center">
         <div class="logo-wrap">
           <nuxt-link to="/">
             <nuxt-img
@@ -12,12 +12,16 @@
           </nuxt-link>
         </div>
 
-        <div class="actions hidden xl:flex items-center">
-          <ul class="menu-list flex items-center">
-            <li v-for="item in allRoutes" :key="item.id" class="menu-item mx-4">
+        <div class="actions tw-hidden xl:tw-flex tw-items-center">
+          <ul class="menu-list tw-flex tw-items-center">
+            <li
+              v-for="item in allRoutes"
+              :key="item.id"
+              class="menu-item tw-mx-4"
+            >
               <nuxt-link
                 :to="item.to"
-                class="menu-item-link font-semibold text-base"
+                class="menu-item-link tw-font-semibold tw-text-base"
               >
                 {{ item.title }}
               </nuxt-link>
@@ -27,12 +31,12 @@
           </ul>
         </div>
 
-        <div class="actions xl:hidden">
-          <ul class="flex items-center">
-            <li class="menu-item mx-4 cursor-pointer h-auto">
+        <div class="actions xl:tw-hidden">
+          <ul class="tw-flex tw-items-center">
+            <li class="tw-menu-item tw-mx-4 tw-cursor-pointer tw-h-auto">
               <a-icon
                 type="menu"
-                class="text-xl"
+                class="tw-text-xl"
                 @click="activeMenuIcon = true"
               />
             </li>
@@ -68,7 +72,7 @@
         >
           <nuxt-link
             :to="item.to"
-            class="font-semibold text-base res-menu-item-link"
+            class="tw-font-semibold tw-text-base res-menu-item-link"
           >
             {{ item.title }}
           </nuxt-link>
@@ -94,31 +98,31 @@ export default {
         //   title: 'Home',
         //   to: '/',
         // },
-        {
-          id: 'about',
-          title: 'About',
-          to: '/about',
-        },
-        {
-          id: 'skills',
-          title: 'Skills',
-          to: '/skills',
-        },
-        {
-          id: 'services',
-          title: 'Services',
-          to: '/services',
-        },
-        {
-          id: 'portfolio',
-          title: 'Portfolio',
-          to: '/portfolio',
-        },
-        {
-          id: 'contact',
-          title: 'Contact',
-          to: '/contact',
-        },
+        // {
+        //   id: 'about',
+        //   title: 'About',
+        //   to: '/about',
+        // },
+        // {
+        //   id: 'skills',
+        //   title: 'Skills',
+        //   to: '/skills',
+        // },
+        // {
+        //   id: 'services',
+        //   title: 'Services',
+        //   to: '/services',
+        // },
+        // {
+        //   id: 'portfolio',
+        //   title: 'Portfolio',
+        //   to: '/portfolio',
+        // },
+        // {
+        //   id: 'contact',
+        //   title: 'Contact',
+        //   to: '/contact',
+        // },
       ],
     }
   },
@@ -145,7 +149,7 @@ export default {
 }
 
 .normal-menu {
-  transition: 0.5s;
+  transition: 0.3s;
 
   .menu-item {
     display: flex;
@@ -164,7 +168,7 @@ export default {
     .menu-item-link,
     i {
       // color: $gray-800;
-      transition: 0.5s;
+      transition: 0.3s;
     }
   }
 }
@@ -247,12 +251,11 @@ export default {
 
   .res-menu-item-link {
     // color: $gray-800;
-    transition: 0.5s;
+    transition: 0.3s;
   }
 
   &:hover {
     .res-menu-item-link {
-      // color: $secondary;
     }
   }
 }

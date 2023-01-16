@@ -2,7 +2,7 @@
   <div
     ref="ToggleThemeRef"
     htmlFor="dn"
-    :class="['toggle', isDark && 'active']"
+    :class="['toggle', $nuxt.$colorMode.value !== 'light' && 'active']"
     @click="handleToggleTheme"
   >
     <!-- style={{ backgroundColor: bgColorBtn }} -->
@@ -25,20 +25,25 @@ export default {
   name: 'ToggleTheme',
 
   data() {
-    return {
-      isDark: false,
-    }
+    return {}
   },
 
-  mounted() {
-    console.log('this: ', this.$nuxt.$colorMode.preference)
-    this.isDark = this.$nuxt.$colorMode.preference
+  fetch() {
+    if (process.client) {
+      const localTheme = localStorage?.getItem('nuxt-color-mode')
+      if (localTheme) {
+        this.$nuxt.$colorMode.preference = localTheme
+      } else {
+        // localStorage.setItem('colorMode', )
+        this.$nuxt.$colorMode.preference = 'dark'
+      }
+    }
   },
 
   methods: {
     handleToggleTheme() {
-      this.isDark = !this.isDark
-      this.$nuxt.$colorMode.preference = this.isDark ? 'dark' : 'light'
+      this.$nuxt.$colorMode.preference =
+        this.$nuxt.$colorMode.preference === 'light' ? 'dark' : 'light'
     },
   },
 }

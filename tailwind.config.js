@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  prefix: 'tw-',
   content: [
     './components/**/*.{js,vue,ts}',
     './layouts/**/*.vue',
@@ -10,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#21367a',
+        primary: '#24c4f7',
       },
 
       container: {
@@ -23,8 +24,8 @@ module.exports = {
       sm: '576px',
       md: '768px',
       lg: '992px',
-      xl: '1200px',
-      '2xl': '1280px',
+      xl: '1000px',
+      // '2xl': '1280px',
     },
   },
   plugins: [],

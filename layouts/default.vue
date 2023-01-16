@@ -1,7 +1,7 @@
 <template>
   <a-layout v-scroll="handleScroll" class="default-layout">
-    <a-layout-header ref="headerRef" class="header z-50">
-      <div class="container">
+    <a-layout-header ref="headerRef" class="header tw-z-50">
+      <div class="tw-container">
         <MenuComponent />
       </div>
     </a-layout-header>
@@ -52,13 +52,12 @@ export default {
   .ant-layout-header {
     padding: 0;
 
-    background-color: var(--bg-secondary) !important;
+    background-color: var(--header-bg) !important;
 
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    width: 100vw;
     z-index: 1000;
 
     &.header {

@@ -1,5 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
+
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -15,6 +16,18 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  },
+
+  loading: {
+    color: '#293579',
+    height: '4px',
+  },
+
+  loadingIndicator: {
+    name: 'circle',
+    color: '#40A9FF',
+    background: 'white',
+    throttle: 0,
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
