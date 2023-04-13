@@ -1,14 +1,12 @@
 <template>
   <div class="menu-wrap">
     <div class="normal-menu">
-      <div class="tw-container tw-flex tw-justify-between tw-items-center">
+      <div
+        class="tw-container tw-flex tw-justify-between tw-items-center tw-px-4 md:tw-px-0"
+      >
         <div class="logo-wrap">
           <nuxt-link to="/">
-            <nuxt-img
-              src="/img/fullLogo.png"
-              class="logo-primary"
-              alt="Leo Asher"
-            />
+            <img src="/img/fullLogo.png" class="logo-primary" alt="Leo Asher" />
           </nuxt-link>
         </div>
 
@@ -54,11 +52,7 @@
       <template slot="title">
         <div class="logo-wrap" @click="handleClose">
           <nuxt-link to="/">
-            <nuxt-img
-              src="/img/svg/fullLogo.svg"
-              class="logo-primary"
-              alt="STP Software"
-            />
+            <img src="/img/fullLogo.png" class="logo-primary" alt="Leo Asher" />
           </nuxt-link>
         </div>
       </template>

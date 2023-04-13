@@ -61,7 +61,7 @@ export default {
   width: 3.5rem;
   height: $height;
   border-radius: $height - 0.6rem;
-  transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: background-color 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
   .toggle__handler {
     position: relative;
@@ -77,13 +77,13 @@ export default {
 
     background-color: #fde8a1 !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     .crater {
       position: absolute;
       background-color: #f0c78a !important;
       opacity: 0;
-      transition: opacity 200ms ease-in-out;
+      transition: opacity 0.3s ease-in-out;
       border-radius: 50%;
     }
 
@@ -112,7 +112,7 @@ export default {
   .star {
     position: absolute;
     background-color: #ffffff !important;
-    transition: all 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     border-radius: 50%;
   }
 

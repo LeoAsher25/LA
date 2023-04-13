@@ -2,9 +2,9 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
 
   target: 'static',
-  ssr: false,
   generate: {
     fallback: false,
+    dir: 'dist',
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -61,6 +61,23 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: 'AIzaSyC_r19BeGBfndJrTvf3sOdvFrMONApQhrg',
+          authDomain: 'leoasher-e65c1.firebaseapp.com',
+          projectId: 'leoasher-e65c1',
+          storageBucket: 'leoasher-e65c1.appspot.com',
+          messagingSenderId: '118780209795',
+          appId: '1:118780209795:web:28f390755fedb5cbf549b6',
+          measurementId: 'G-D1PDBV1VSZ',
+        },
+        services: {
+          auth: true, // Just as example. Can be any other service.
+        },
+      },
+    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -81,4 +98,5 @@ export default {
   styleResources: {
     scss: ['@/assets/css/mixins.scss', '@/assets/css/vars/*'],
   },
+  buildDir: 'dist',
 }
