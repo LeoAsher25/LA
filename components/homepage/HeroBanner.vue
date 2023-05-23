@@ -20,7 +20,7 @@
             Hi, I'm
             <span class="tw-text-primary"> Leo Asher </span>
           </p>
-          <p class="tw-text-5xl tw-font-bold tw-my-3">I'm the one</p>
+          <p class="tw-text-5xl tw-font-bold tw-my-3">I'm the only</p>
           <p class="tw-text-5xl tw-font-bold tw-my-3">And, so are you</p>
         </div>
       </div>
